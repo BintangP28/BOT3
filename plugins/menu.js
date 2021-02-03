@@ -28,6 +28,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'main': 'Main',
       'info': 'Info BOT',
       'xp': 'Exp & Limit',
+      'premium':Premium
       'sticker': 'Sticker',
       'kerang': 'Kerang Ajaib',
       'quotes': 'Quotes',
@@ -37,10 +38,8 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
       'downloader': 'Downloader',
       'tools': 'Tools',
       'fun': 'Fun',
-      'jadibot': 'Jadi Bot',
       'owner': 'Owner',
       'host': 'Host',
-      'advanced': 'Advanced',
       '': 'No Category',
     }
     for (let plugin of Object.values(global.plugins))
@@ -64,35 +63,33 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     }
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || `
-╭════•›「 ${conn.getName(conn.user.jid)} 」
-╿  Hai, %name !
-╿ Total : *%exp XP*
-╿ Tersisa : *%limit Limit*
-╿
-╿ Hari : *%week*
-╿ Tanggal : *%date*
-╿ Waktu : *%time*
-╿ Lama Aktif : *%uptime*
-╿ Database : %totalreg Nomor
-╰═══════════════
+╭═┅ৡ ৢ ͡ ͜✦═══╡꧁꧂╞═══┅ৡ ৢ ͡ ͜✦═╮ %readmore
+┃
+┃:◄✜┢┅ீ͜ৡৢ͜͡✦━━◇━━ீ͜ৡৢ͜͡✦┅┧✜►
+┃
+┣━⊱ *Hai, %name!*
+┃
+┣⊱ *EXP: %exp XP*
+┣━⊱ *LIMIT: %limit Limit*
+┃
+┣⊱ *Tanggal: %week , %date*
+┣━⊱ *Waktu: %time*
+┃
+┣⊱ *Waktu Aktif: %uptime*
+┣━⊱ *Database: %totalreg nomor*
+┣⊱ *BOT:*
+┣━⊱ Bintang Pamungkas
+┣⊱ *OWNER:*
+┣━⊱ wa.me/6283813304760
+┃
+╰═┅ৡ ৢ ͡ ͜✦═══╡꧁꧂╞═══┅ৡ ৢ ͡ ͜✦═╯
 
-╭════•›「 Sosmed 」
-╿ Github :
-╿ https://github.com/Arya274/Arya-BOT3
-╿ Youtube : Drawl Nag
-╿ Instagram : @arpunchs
-╰═══════════════
-
-╭════•›「 Rules 」
-╿• Telpon/VC = BAN
-╿• Spam = BAN
-╰═══════════════
-
+━⋆⃟⊱๑⋆⃟⊱๑ ˌ⃟ˌ⃟ˌ⃟ˌ‍⚔ˌ⃟ˌ⃟ˌ⃟ˌ⃟ˌ ๑⋆⃟⊱๑⋆⃟⊱๑⋆⃟⊱━
 %readmore`
-    let header = conn.menu.header || '╭════•›「 %category 」'
-    let body   = conn.menu.body   || '╿ %cmd%islimit'
-    let footer = conn.menu.footer || '╰═══════════════\n'
-    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by: ${global.conn.user.jid.split`@`[0]}`) + `\n*%npmname@^%version*\n\`\`\`\%npmdesc\`\`\``
+    let header = conn.menu.header || '╠══✪〘 *%category* 〙✪══'
+    let body   = conn.menu.body   || '╠➥ *%cmd%islimit*'
+    let footer = conn.menu.footer || '║'
+    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `Powered by https://wa.me/${global.conn.user.jid.split`@`[0]}`) + `\n*╰━━━⊱❰ BintangP28* ❱⊰━━━╯\n\`\`\`\%npmdesc\`\`\
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
