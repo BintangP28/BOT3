@@ -1,31 +1,24 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
-⚠️ *INFO BOT* ⚠️
-Dibuat dengan javascript via NodeJs,Ffmpeg,dan ImageMagick
-
-Rec: Drawl Nag
-Script: @Nurotomo
-Github: 
-https://github.com/Arya274/Arya-BOT3
-
-*Sosmed :*
-Kritik kami di sosmed ataupun YouTube.
-Instagram: @arpunchs
-➥ YouTube:
-youtube.com/DrawlNag
-
-*Thanks To :*
-Nurotomo
-MfarelS
-ST4RZ
-Dan kawan yang lain :)
-
-╠═〘 DONASI 〙 ═
-╠➥ SmartFren: 0882-3543-5804
-╠➥ Tsel: 0813-5730-2007
-╠➥ Indosat: 0815-1586-0089
-║>Request? Wa.me/6281357302007
-╠═〘 INFO BOT 〙 ═
+┣━⊱ ❰ *INFO BOT* ❱ ═
+┣⊱ _Dibuat dengan javascript via NodeJs_
+┣⊱ _Rec: Bintang Pamungkas_
+┣⊱ _Script: @BintangP28_
+┃          
+┣━⊱ ❰ *Thanks To* ❱ ═
+┣⊱ _Kelvin:v_
+┣⊱ _Izbullah:v_
+┣⊱ _Me:v_
+┣⊱ _Dan kawan yang lain :)_
+┃
+┣━⊱❰ *DONASI* ❱ ═
+┣⊱ GOPAY: 0838-1330-4760
+┣⊱ DANA: 0838-1330-4760
+┣⊱ XL/AXIS:0859-2992-2766 / 0838-1330-4760
+┃
+┣━⊱ Request? Wa.me/6283813304760
+┃
+  ╰══─⊱  ❰ *Bintang Pamungkas* ❱ ⊰─══╯
 `.trim(), m)
 }
 handler.help = ['info']
