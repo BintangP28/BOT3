@@ -18,6 +18,7 @@ let handler = async (m, { conn, text }) => {
   })
 }
 handler.command = /^(fitnah|fakereply)$/
+handler.tags = [`Fun`]
 
 module.exports = handler
 
