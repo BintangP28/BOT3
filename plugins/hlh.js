@@ -4,7 +4,8 @@ let handler = async (m, { command, text }) => {
   await m.reply(txt.replace(/[aiueo]/g, ter).replace(/[AIUEO]/g, ter.toUpperCase()))
 }
 handler.help = [...'aiueo'].map(v => `h${v}l${v}h <teks>`)
-handler.tags = ['tools']
+handler.tags = ['Premium']
 handler.command = /^h([aiueo])l\1h/i
+handler.premium = true
 
 module.exports = handler
